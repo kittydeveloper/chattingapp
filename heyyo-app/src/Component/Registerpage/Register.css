@@ -1,0 +1,56 @@
+.Register_head{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+ 
+}
+.Register_design{
+    width:100%;
+    margin: 0px 0px;
+    height: 100vh;
+    background-color:black;
+    /* background: url("https://m.media-amazon.com/images/G/01/sell/images/Appstore-SPN_poster.jpg"); */
+}
+.register_card{
+    width:500px;
+    background-color: white;
+    /* background: transparent; */
+    height: 400px;
+    border-radius: 20px;
+}
+.Register_title{
+    display: flex;
+    justify-content: center;
+}
+.Register_title p{
+  font-size: 20px;
+}
+.Register_form{
+    display: flex;
+   gap: 10px;
+   flex-direction: column;
+   padding: 20px;
+}
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form_group input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+.Register_btn{
+  display: flex;
+  justify-content: center;
+}
+

@@ -1,6 +1,1248 @@
-h1{
-    color: #fff;
-    font-size: 2.5rem;
+/* Sweet Date 4u Landing Page Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto; /* Disable smooth scroll for better performance */
+    background: linear-gradient(135deg, #2c1810 0%, #1a1a1a 50%, #000000 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #2c1810 0%, #1a1a1a 50%, #000000 100%);
+    min-height: 100vh;
+    position: relative;
+    color: #ffffff;
+}
+
+/* Remove any Bootstrap blue colors */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #ff6b9d !important;
+    border-color: #ff6b9d !important;
+    color: white !important;
+}
+
+.text-primary {
+    color: #ff6b9d !important;
+}
+
+.bg-primary {
+    background-color: #ff6b9d !important;
+}
+
+/* Override any blue links */
+a {
+    color: #ff6b9d;
+}
+
+a:hover {
+    color: #e55a8a;
+}
+
+/* Remove any blue focus states */
+.form-control:focus,
+.btn:focus {
+    border-color: #ff6b9d !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 157, 0.25) !important;
+}
+
+/* Additional overrides to remove any blue colors */
+.btn-outline-primary {
+    color: #ff6b9d !important;
+    border-color: #ff6b9d !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ff6b9d !important;
+    color: white !important;
+}
+
+.text-info {
+    color: #ff6b9d !important;
+}
+
+.bg-info {
+    background-color: #ff6b9d !important;
+}
+
+/* Remove any blue from form elements */
+.form-select:focus,
+.form-check-input:focus {
+    border-color: #ff6b9d !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 157, 0.25) !important;
+}
+
+/* Ensure no blue colors in any Bootstrap components */
+.alert-primary {
+    background-color: rgba(255, 107, 157, 0.1) !important;
+    border-color: #ff6b9d !important;
+    color: #ff6b9d !important;
+}
+
+.badge-primary {
+    background-color: #ff6b9d !important;
+    color: white !important;
+}
+
+/* Remove any blue from progress bars */
+.progress-bar {
+    background-color: #ff6b9d !important;
+}
+
+/* Remove any blue from list groups */
+.list-group-item-primary {
+    background-color: rgba(255, 107, 157, 0.1) !important;
+    color: #ff6b9d !important;
+}
+
+/* Ensure the page background is always dark */
+#root {
+    background: linear-gradient(135deg, #2c1810 0%, #1a1a1a 50%, #000000 100%);
+    min-height: 100vh;
+}
+
+/* Remove any loading spinners or blue elements */
+.spinner-border,
+.spinner-grow {
+    color: #ff6b9d !important;
+}
+
+/* Override any blue colors in Bootstrap utilities */
+.border-primary {
+    border-color: #ff6b9d !important;
+}
+
+.shadow-primary {
+    box-shadow: 0 0.125rem 0.25rem rgba(255, 107, 157, 0.075) !important;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 8px 0;
+    font-size: 12px;
+    border-bottom: 1px solid #333;
+    position: relative;
+    z-index: 1001;
+    width: 100%;
+}
+
+.top-bar-left {
+    font-size: 11px;
+}
+
+.help-text {
+    color: #999;
+}
+
+.social-icons {
+    margin-left: 15px;
+}
+
+.social-icon-small {
+    color: #999;
+    text-decoration: none;
+    font-size: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon-small:hover {
+    color: #ff6b9d;
+}
+
+.email-text {
+    color: #999;
+    font-size: 11px;
+}
+
+.top-bar-right {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.top-btn {
+    padding: 6px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: #ff6b9d;
+    color: white;
+    border-color: #ff6b9d;
+}
+
+.login-btn:hover {
+    background: #e55a8a;
+    color: white;
+    border-color: #e55a8a;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 107, 157, 0.3);
+}
+
+.signup-btn {
+    background: #ff6b9d;
+    color: white;
+    border-color: #ff6b9d;
+}
+
+.signup-btn:hover {
+    background: #e55a8a;
+    color: white;
+    border-color: #e55a8a;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 107, 157, 0.3);
+}
+
+/* Main Navigation */
+.main-navbar {
+    background: linear-gradient(135deg, #2c1810 0%, #1a1a1a 100%) !important;
+    border: none !important;
+    padding: 15px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-heart {
+    color: #ff6b9d;
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.logo-tagline {
+    font-size: 0.7rem;
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #ff6b9d !important;
+}
+
+.nav-link.active {
+    color: #ff6b9d !important;
+}
+
+.search-icon {
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search-icon:hover {
+    color: #ff6b9d;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #2c1810 0%, #1a1a1a 50%, #000000 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(228, 90, 138, 0.1));
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-section .container-fluid {
+    position: relative;
+    z-index: 2;
+}
+
+/* Registration Container */
+.registration-container {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.registration-form {
+    background: rgba(44, 24, 16, 0.9);
+    border-radius: 15px;
+    padding: 2.5rem;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-title {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
     text-align: center;
-    margin-top: 20px;
+}
+
+.form-description {
+    color: #cccccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    padding: 12px 15px !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #ff6b9d !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1) !important;
+    outline: none !important;
+}
+
+.form-control::placeholder {
+    color: #999 !important;
+}
+
+.password-container {
+    display: flex;
+    gap: 10px;
+}
+
+.password-container .form-control {
+    flex: 1;
+}
+
+.confirm-btn {
+    background: #ff6b9d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.confirm-btn:hover {
+    background: #e55a8a;
+    transform: translateY(-1px);
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.signup-primary-btn {
+    background: #ff6b9d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.signup-primary-btn:hover {
+    background: #e55a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+}
+
+.facebook-btn {
+    background: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.facebook-btn:hover {
+    background: #2d4373;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 89, 152, 0.3);
+}
+
+/* Latest Members Section */
+.latest-members {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.latest-members h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.members-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.member-avatars {
+    display: flex;
+    gap: 10px;
+}
+
+.member-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b9d, #e55a8a);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.carousel-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.carousel-btn:hover {
+    background: #ff6b9d;
+    transform: scale(1.1);
+}
+
+/* Hero Image Container */
+.hero-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+/* Mid Section */
+.mid-section {
+    background: #ffffff;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.mid-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="world" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23f0f0f0"/></pattern></defs><rect width="100" height="100" fill="url(%23world)"/></svg>');
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.mid-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.mid-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.highlight {
+    color: #ff6b9d;
+}
+
+.mid-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mid-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.join-free-btn {
+    background: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-free-btn:hover {
+    background: #660000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+}
+
+.tv-commercial-btn {
+    background: #ff6b9d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tv-commercial-btn:hover {
+    background: #e55a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+}
+
+/* Statistics Section */
+.stats-section {
+    background: #ffffff;
+    padding: 3rem 0;
+    border-top: 1px solid #eee;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="world" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23f0f0f0"/></pattern></defs><rect width="100" height="100" fill="url(%23world)"/></svg>');
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.stats-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.heart-icon {
+    color: #ff6b9d;
+}
+
+.users-icon {
+    color: #ff6b9d;
+}
+
+.venus-icon {
+    color: #ff6b9d;
+}
+
+.mars-icon {
+    color: #ff6b9d;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Bottom Controls */
+.bottom-controls {
+    background: #f8f9fa;
+    padding: 1.5rem 0;
+    border-top: 1px solid #eee;
+}
+
+.download-app-btn {
+    background: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.download-app-btn:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.store-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.store-buttons .app-store-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.store-buttons .app-store-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+    text-decoration: none;
+}
+
+.store-buttons .app-store-image {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    filter: brightness(0.9);
+}
+
+.store-buttons .app-store-link:hover .app-store-image {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+.control-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.control-icon {
+    background: #ffffff;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.control-icon:hover {
+    background: #ff6b9d;
+    color: white;
+    border-color: #ff6b9d;
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #2c1810 0%, #1a1a1a 100%) !important;
+    border-top: 3px solid #ff6b9d;
+    padding: 3rem 0 1rem 0;
+}
+
+.footer-logo {
+    transition: all 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+.footer a {
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff6b9d !important;
+    transform: translateX(5px);
+}
+
+.social-links-footer {
+    margin-top: 1.5rem;
+}
+
+.social-footer-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.social-footer-icon:hover {
+    background: #ff6b9d !important;
+    transform: translateY(-3px) !important;
+    color: white !important;
+    text-decoration: none;
+}
+
+.footer h6 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+    color: #cccccc !important;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #ff6b9d !important;
+    transform: translateX(5px);
+    text-decoration: none;
+}
+
+.footer .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.footer .btn-outline-light:hover {
+    background: #ff6b9d;
+    border-color: #ff6b9d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .text-light {
+    color: #cccccc !important;
+    font-size: 0.9rem;
+}
+
+.footer .text-danger {
+    color: #ff6b9d !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 1.5rem;
+    }
+    
+    .registration-form {
+        padding: 2rem;
+    }
+    
+    .mid-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-left {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .social-icons {
+        margin-left: 0;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .registration-container {
+        padding: 1rem;
+    }
+    
+    .registration-form {
+        padding: 1.5rem;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+    
+    .mid-title {
+        font-size: 1.8rem;
+    }
+    
+    .mid-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .join-free-btn,
+    .tv-commercial-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .control-icons {
+        justify-content: center;
+    }
+    
+    .store-buttons {
+        justify-content: center;
+    }
+    
+    .footer .col-lg-2 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-bar {
+        font-size: 10px;
+    }
+    
+    .email-text {
+        display: none;
+    }
+    
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .logo-tagline {
+        font-size: 0.6rem;
+    }
+    
+    .registration-form {
+        padding: 1rem;
+    }
+    
+    .form-title {
+        font-size: 1.3rem;
+    }
+    
+    .form-description {
+        font-size: 0.8rem;
+    }
+    
+    .password-container {
+        flex-direction: column;
+    }
+    
+    .confirm-btn {
+        width: 100%;
+    }
+    
+    .mid-title {
+        font-size: 1.5rem;
+    }
+    
+    .mid-description {
+        font-size: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-icon {
+        font-size: 1.5rem;
+    }
+    
+    .store-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .store-btn {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+    
+    .footer {
+        padding: 2rem 0 1rem 0;
+    }
+    
+    .footer .col-lg-4 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .social-links-footer {
+        justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes fadeInLeft {
+    from { 
+        opacity: 0; 
+        transform: translateX(-50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes fadeInRight {
+    from { 
+        opacity: 0; 
+        transform: translateX(50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+/* Utility classes */
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Focus states for accessibility */
+.form-control:focus,
+.signup-primary-btn:focus,
+.facebook-btn:focus,
+.join-free-btn:focus,
+.tv-commercial-btn:focus {
+    outline: 2px solid #ff6b9d;
+    outline-offset: 2px;
+}
+
+/* Loading states */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Performance optimizations */
+* {
+    box-sizing: border-box;
+}
+
+/* Optimize animations for better performance */
+.nav-link,
+.top-btn,
+.social-icon-small,
+.control-icon,
+.store-btn,
+.signup-primary-btn,
+.confirm-btn,
+.join-free-btn,
+.tv-commercial-btn,
+.download-app-btn {
+    transition: all 0.2s ease; /* Reduced from 0.3s for faster response */
+    will-change: transform, opacity; /* Optimize for GPU */
+}
+
+/* Optimize hover effects */
+.nav-link:hover,
+.top-btn:hover,
+.social-icon-small:hover,
+.control-icon:hover,
+.store-btn:hover,
+.signup-primary-btn:hover,
+.confirm-btn:hover,
+.join-free-btn:hover,
+.tv-commercial-btn:hover,
+.download-app-btn:hover {
+    transform: translateY(-2px); /* Use transform instead of margin/padding */
+}
+
+/* Optimize form animations */
+.form-control:focus {
+    transition: all 0.2s ease; /* Reduced from 0.3s */
+    transform: scale(1.02); /* Use transform instead of box-shadow changes */
+}
+
+/* Optimize floating elements */
+.floating-elements {
+    will-change: transform; /* Optimize for GPU */
+}
+
+.floating-heart {
+    animation: float 3s ease-in-out infinite; /* Reduced from 4s */
+    will-change: transform;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg); /* Reduced movement */
+    }
+}
+
+/* Optimize stats animation */
+.stat-number {
+    transition: all 0.3s ease; /* Reduced from 0.5s */
+    will-change: transform;
+}
+
+.stat-item:hover .stat-number {
+    transform: scale(1.1); /* Use transform instead of font-size changes */
+}
+
+/* Optimize footer animations */
+.social-footer-icon {
+    transition: all 0.2s ease; /* Reduced from 0.3s */
+    will-change: transform, background-color;
+}
+
+.social-footer-icon:hover {
+    transform: translateY(-3px) scale(1.1); /* Use transform */
+}
+
+/* Optimize hero section */
+.hero-section {
+    will-change: transform; /* Optimize for GPU */
+}
+
+.hero-image {
+    transition: transform 0.3s ease; /* Reduced from 0.5s */
+    will-change: transform;
+}
+
+.hero-image:hover {
+    transform: scale(1.05); /* Reduced from 1.1 */
+}
+
+/* App Store Images in Footer */
+.app-store-link {
+    display: block;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.app-store-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+    text-decoration: none;
+}
+
+.app-store-image {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    filter: brightness(0.9);
+}
+
+.app-store-link:hover .app-store-image {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for app store images */
+@media (max-width: 768px) {
+    .app-store-image {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .app-store-image {
+        max-width: 100px;
+    }
 }

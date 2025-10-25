@@ -1,0 +1,356 @@
+/* Sweet Date 4u Safety Tips Page Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.safety-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c1810 0%, #1a1a1a 50%, #000000 100%);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.safety-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(228, 90, 138, 0.1));
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(44, 24, 16, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 107, 157, 0.2);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-heart {
+    color: #ff6b9d;
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.logo-tagline {
+    font-size: 0.7rem;
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    color: #ff6b9d !important;
+    background: rgba(255, 107, 157, 0.1);
+}
+
+.signup-btn {
+    background: #ff6b9d !important;
+    color: white !important;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+}
+
+.signup-btn:hover {
+    background: #e55a8a !important;
+    transform: translateY(-2px);
+}
+
+/* Safety Content */
+.safety-content {
+    position: relative;
+    z-index: 2;
+    padding: 120px 0 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff6b9d;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: rgba(255, 107, 157, 0.1);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 107, 157, 0.2);
+    transform: translateX(-5px);
+}
+
+.safety-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.safety-header h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.safety-header p {
+    color: #cccccc;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Safety Tips Grid */
+.safety-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.safety-tip-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.safety-tip-card:hover {
+    border-color: rgba(255, 107, 157, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.2);
+}
+
+.tip-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff6b9d, #e55a8a);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.safety-tip-card h3 {
+    color: #ff6b9d;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.tip-description {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.tip-list {
+    color: #cccccc;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-left: 1.5rem;
+}
+
+.tip-list li {
+    margin-bottom: 0.8rem;
+}
+
+.tip-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Emergency Section */
+.emergency-section {
+    background: rgba(255, 107, 157, 0.1);
+    border: 1px solid rgba(255, 107, 157, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.emergency-section h2 {
+    color: #ff6b9d;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.emergency-section p {
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.emergency-contact {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: inline-block;
+}
+
+.emergency-contact p {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.emergency-contact p:last-child {
+    margin-bottom: 0;
+}
+
+.emergency-contact strong {
+    color: #ff6b9d;
+}
+
+.emergency-contact a {
+    color: #ff6b9d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.emergency-contact a:hover {
+    color: #e55a8a;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .safety-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .safety-header p {
+        font-size: 1rem;
+    }
+    
+    .safety-tips-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .safety-tip-card {
+        padding: 1.5rem;
+    }
+    
+    .safety-content {
+        padding: 100px 0 40px 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .safety-header h1 {
+        font-size: 2rem;
+    }
+    
+    .safety-header p {
+        font-size: 0.9rem;
+    }
+    
+    .safety-tip-card {
+        padding: 1rem;
+    }
+    
+    .safety-tip-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .tip-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .emergency-section {
+        padding: 1.5rem;
+    }
+    
+    .emergency-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .emergency-contact {
+        padding: 1rem;
+    }
+}

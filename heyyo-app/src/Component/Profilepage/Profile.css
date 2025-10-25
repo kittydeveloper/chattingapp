@@ -1,0 +1,526 @@
+/* Modern Profile Page Styling with Pink-Purple Gradients */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.profile-main {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    margin: 2rem;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInUp 0.8s ease;
+    padding: 2rem;
+}
+
+/* Profile Cards */
+.profile-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+    border-color: rgba(142, 45, 226, 0.3);
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-card:hover::before {
+    opacity: 1;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #8e2de2;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(142, 45, 226, 0.3);
+    animation: bounceIn 1s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(142, 45, 226, 0.4);
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Camera Icon */
+.camera-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(142, 45, 226, 0.3);
+    border: 2px solid white;
+}
+
+.camera-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(142, 45, 226, 0.4);
+}
+
+.camera-icon i {
+    color: white;
+    font-size: 18px;
+}
+
+/* Form Controls */
+.form-control {
+    border: 2px solid rgba(142, 45, 226, 0.1);
+    border-radius: 15px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #8e2de2;
+    box-shadow: 0 0 0 3px rgba(142, 45, 226, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.form-control::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Section Headers */
+.section-header {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Gender and Interest Options */
+.gender-options,
+.interest-options {
+    margin-bottom: 1rem;
+}
+
+.gender-option,
+.interest-option {
+    margin-bottom: 0.5rem;
+}
+
+.custom-radio {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(142, 45, 226, 0.2);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-radio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.custom-radio:hover::before {
+    left: 100%;
+}
+
+.custom-radio:hover {
+    border-color: #8e2de2;
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(142, 45, 226, 0.2);
+}
+
+.btn-check:checked + .custom-radio {
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    border-color: #8e2de2;
+    color: white;
+    box-shadow: 0 5px 15px rgba(142, 45, 226, 0.3);
+}
+
+.btn-check:checked + .custom-radio i {
+    color: white;
+}
+
+/* Age Select Container */
+.age-select-container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 1rem;
+    border: 2px solid rgba(142, 45, 226, 0.1);
+    transition: all 0.3s ease;
+}
+
+.age-select-container:hover {
+    border-color: #8e2de2;
+    box-shadow: 0 5px 15px rgba(142, 45, 226, 0.1);
+}
+
+.form-select {
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    background: rgba(142, 45, 226, 0.1);
+}
+
+/* Update Button */
+.btn-update {
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(142, 45, 226, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-update::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-update:hover::before {
+    left: 100%;
+}
+
+.btn-update:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(142, 45, 226, 0.4);
+}
+
+.btn-update:active {
+    transform: translateY(-1px);
+}
+
+.btn-update:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Alert Popups */
+.alert-popup-main {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.alert-popup {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+    animation: slideInRight 0.5s ease;
+    border-left: 4px solid;
+    min-width: 300px;
+}
+
+.Error {
+    border-left-color: #e74c3c;
+}
+
+.Success {
+    border-left-color: #27ae60;
+}
+
+.popup-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.Error .popup-icon {
+    color: #e74c3c;
+}
+
+.Success .popup-icon {
+    color: #27ae60;
+}
+
+.cancel-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    margin-left: auto;
+    transition: color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    color: #333;
+}
+
+/* Animations */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .profile-card {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-main {
+        margin: 1rem;
+        border-radius: 20px;
+        padding: 1.5rem;
+    }
+    
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .camera-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .camera-icon i {
+        font-size: 16px;
+    }
+    
+    .btn-update {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-main {
+        margin: 0.5rem;
+        border-radius: 15px;
+        padding: 1rem;
+    }
+    
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .camera-icon {
+        width: 30px;
+        height: 30px;
+        bottom: 5px;
+        right: 5px;
+    }
+    
+    .camera-icon i {
+        font-size: 14px;
+    }
+    
+    .section-header {
+        font-size: 1.1rem;
+    }
+    
+    .custom-radio {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-update {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #7c1dd9, #3a00c7);
+}
+
+/* Enhanced Form Styling */
+.form-control.border-bottom-only {
+    border: none;
+    border-bottom: 2px solid rgba(142, 45, 226, 0.2);
+    border-radius: 0;
+    padding: 0.5rem 0;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.form-control.border-bottom-only:focus {
+    border-bottom-color: #8e2de2;
+    box-shadow: none;
+    background: transparent;
+}
+
+/* Textarea Enhancement */
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Loading States */
+.btn-update.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Smooth Transitions */
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

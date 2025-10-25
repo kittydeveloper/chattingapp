@@ -3,11 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter } from 'react-router-dom';
+import { UserProvider } from './Component/LoginPage/userContext';
+import { UserchatProvider } from './Component/ChatPage/chatcontext';
+import { UserprofieProvider } from './Component/Profilepage/UserProfileContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
+  
+    <UserchatProvider>
+    <UserProvider>
+      < UserprofieProvider>
+    
     <App />
+   </UserprofieProvider>
+    </UserProvider>
+    </UserchatProvider>
+  
+    
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 

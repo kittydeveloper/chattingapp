@@ -1,0 +1,286 @@
+/* Sweet Date 4u Privacy Policy Page Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.privacy-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c1810 0%, #1a1a1a 50%, #000000 100%);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.privacy-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(228, 90, 138, 0.1));
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(44, 24, 16, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 107, 157, 0.2);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-heart {
+    color: #ff6b9d;
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.logo-tagline {
+    font-size: 0.7rem;
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    color: #ff6b9d !important;
+    background: rgba(255, 107, 157, 0.1);
+}
+
+.signup-btn {
+    background: #ff6b9d !important;
+    color: white !important;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+}
+
+.signup-btn:hover {
+    background: #e55a8a !important;
+    transform: translateY(-2px);
+}
+
+/* Privacy Content */
+.privacy-content {
+    position: relative;
+    z-index: 2;
+    padding: 120px 0 60px 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff6b9d;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: rgba(255, 107, 157, 0.1);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 107, 157, 0.2);
+    transform: translateX(-5px);
+}
+
+.privacy-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.privacy-header h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.privacy-section {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.privacy-section:hover {
+    border-color: rgba(255, 107, 157, 0.3);
+    transform: translateY(-2px);
+}
+
+.privacy-section h2 {
+    color: #ff6b9d;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.privacy-section p {
+    color: #cccccc;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-section p:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-section ul {
+    color: #cccccc;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.privacy-section ul li:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-section strong {
+    color: #ffffff;
+}
+
+.contact-info {
+    background: rgba(255, 107, 157, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info strong {
+    color: #ffffff;
+}
+
+.contact-info a {
+    color: #ff6b9d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #e55a8a;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .privacy-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .privacy-section {
+        padding: 1.5rem;
+    }
+    
+    .privacy-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .privacy-content {
+        padding: 100px 0 40px 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .privacy-header h1 {
+        font-size: 2rem;
+    }
+    
+    .privacy-section {
+        padding: 1rem;
+    }
+    
+    .privacy-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-info {
+        padding: 1rem;
+    }
+}
